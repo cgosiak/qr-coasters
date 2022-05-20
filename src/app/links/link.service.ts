@@ -16,7 +16,7 @@ export class LinkService {
   ) { }
 
   getLinks(): Link[] {
-    return [...LINKS, ...this.amazonProductService.getLinks()];
+    return LINKS;
   }
 
   getLinkById(id: string): Link | undefined {
@@ -37,5 +37,10 @@ export class LinkService {
       url: `https://en.wikipedia.org/?curid=${Object.keys(response.query.pages)[0]}`,
       visibility: Visibility.PUBLIC
     };
+  }
+
+  getRandomAmazonLink(): Link {
+    const links: Link[] = this.amazonProductService.getLinks();
+    return links[Math.floor(Math.random() * links.length)];
   }
 }
