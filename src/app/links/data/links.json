@@ -1,8 +1,57 @@
 [
   {
-    "id": "1",
-    "url": "https://google.com",
+    "url": "https://www.towergame.app/",
     "visibility": "public",
-    "tags": ["test"]
+    "tags": ["game"]
+  },
+  {
+    "url": "https://kylesureline.com/hangapp/",
+    "visibility": "public",
+    "tags": ["game"]
+  },
+  {
+    "url": "https://bubblepairs.apps.in.rs/",
+    "visibility": "public",
+    "tags": ["game"]
+  },
+  {
+    "url": "https://bsehovac.github.io/the-cube/",
+    "visibility": "public",
+    "tags": ["game"]
+  },
+  {
+    "url": "https://tmaiadev-tetra.netlify.app/",
+    "visibility": "public",
+    "tags": ["game"]
+  },
+  {
+    "url": "https://tmaiadev-tictactoe.netlify.app/",
+    "visibility": "public",
+    "tags": ["game"]
+  },
+  {
+    "url": "https://2048-opera-pwa.surge.sh/",
+    "visibility": "public",
+    "tags": ["game"]
+  },
+  {
+    "url": "https://bobrov.dev/pacman-pwa/index.html",
+    "visibility": "public",
+    "tags": ["game"]
+  },
+  {
+    "url": "https://vcjhwebdev.github.io/waterwars/",
+    "visibility": "public",
+    "tags": ["game"]
+  },
+  {
+    "url": "https://tmaiadev-snake.netlify.app/",
+    "visibility": "public",
+    "tags": ["game"]
+  },
+  {
+    "url": "https://offline-dino-game.firebaseapp.com/",
+    "visibility": "public",
+    "tags": ["game"]
   }
 ]

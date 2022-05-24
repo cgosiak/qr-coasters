@@ -34,6 +34,7 @@ export class ForwardingComponent implements OnInit {
       case Action.WIKI:
           link = await this.linkService.getRandomWikiLink();
           break;
+      case Action.RANDOM:
       default:
         links = this.linkService.getPublicLinks();
         link = links[Math.floor(Math.random() * links.length)];
