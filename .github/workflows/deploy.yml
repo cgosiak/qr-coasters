@@ -15,7 +15,7 @@ jobs:
         node-version: '16.x'
         cache: 'npm'
     - run: npm ci
-    - run: npm run build
+    - run: ng build --output-path dist --base-href /qr-coasters/
     - name: Fix for Angular Routing
       run: cp ./dist/index.html ./dist/404.html
     - name: Deploy
