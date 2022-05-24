@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:github": "ng build --output-path dist --base-href /qr-coasters/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
