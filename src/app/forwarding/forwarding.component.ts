@@ -23,24 +23,17 @@ export class ForwardingComponent implements OnInit {
     let links: Link[];
     switch (action) {
       case Action.STATIC:
-        const id: string = this.route.snapshot.paramMap.get('id') as string;
+        const id: string = this.route.snapshot.paramMap.get('data') as string;
         link = this.linkService.getLinkById(id);
         break;
       case Action.TAG:
-        const tag: string = this.route.snapshot.paramMap.get('id') as string;
-        switch (tag) {
-          case 'wiki':
-            link = await this.linkService.getRandomWikiLink();
-            break;
-          case 'amazon':
-              link = this.linkService.getRandomAmazonLink();
-              break;
-          default:
-            links = this.linkService.getLinksByTag(tag);
-            link = links[Math.floor(Math.random() * links.length)];
-            break;
-        }
+        const tag: string = this.route.snapshot.paramMap.get('data') as string;
+        links = this.linkService.getLinksByTag(tag);
+        link = links[Math.floor(Math.random() * links.length)];
         break;
+      case Action.WIKI:
+          link = await this.linkService.getRandomWikiLink();
+          break;
       default:
         links = this.linkService.getPublicLinks();
         link = links[Math.floor(Math.random() * links.length)];

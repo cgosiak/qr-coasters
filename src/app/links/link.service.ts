@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Link, Visibility } from './link';
 import LINKS from './data/links.json';
-import { AmazonProductService } from '../amazon/amazon-product.service';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 
@@ -11,7 +10,6 @@ import { firstValueFrom } from 'rxjs';
 export class LinkService {
 
   constructor(
-    private amazonProductService: AmazonProductService,
     private http: HttpClient
   ) { }
 
@@ -37,10 +35,5 @@ export class LinkService {
       url: `https://en.wikipedia.org/?curid=${Object.keys(response.query.pages)[0]}`,
       visibility: Visibility.PUBLIC
     };
-  }
-
-  getRandomAmazonLink(): Link {
-    const links: Link[] = this.amazonProductService.getLinks();
-    return links[Math.floor(Math.random() * links.length)];
   }
 }
